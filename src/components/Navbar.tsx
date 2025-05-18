@@ -19,9 +19,9 @@ export default function Navbar() {
         <nav className="hidden md:flex gap-8 font-medium text-gray-700">
           <Link href="/" className="hover:text-[#1A73E8] transition-colors">Home</Link>
           <Link href="/services" className="hover:text-[#1A73E8] transition-colors">Services</Link>
-          <Link href="/bonus" className="hover:text-[#1A73E8] transition-colors">Bonus</Link>
-          <Link href="/contact" className="hover:text-[#1A73E8] transition-colors">Contact</Link>
-          <Link href="/about" className="hover:text-[#1A73E8] transition-colors">about</Link>
+          <Link href="/bonus" className="hover:text-[#1A73E8] transition-colors">Our Team</Link>
+          <Link href="/contact" className="hover:text-[#1A73E8] transition-colors">Contact us</Link>
+          <Link href="/about" className="hover:text-[#1A73E8] transition-colors">About us</Link>
         </nav>
 
         {/* Mobile Menu Button */}
