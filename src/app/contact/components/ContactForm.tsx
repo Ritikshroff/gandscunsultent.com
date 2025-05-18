@@ -5,6 +5,8 @@ import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { MoveRight } from "lucide-react";
 import { motion } from "framer-motion";
+import Head from "next/head";
+
 // import contact from "../../../public/contact-us.webp";
 
 function SubmissionSuccess() {
@@ -72,10 +74,60 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center px-4 py-10">
-      <Toaster containerClassName="top-8" position="top-center" reverseOrder={false} />
+    <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center px-2 py-6 font-inter">
+      {/* SEO Meta Tags */}
+      <Head>
+        <title>Contact Us | RegisterKaro</title>
+        <meta
+          name="description"
+          content="Contact RegisterKaro for expert help with company incorporation, compliance, tax, and more. Get in touch with our team for fast support."
+        />
+        <meta
+          name="keywords"
+          content="contact, RegisterKaro, company registration, compliance, tax, support"
+        />
+      </Head>
 
-      {/* 🌟 WhatsApp Banner */}
+      {/* Accessible skip link */}
+      <a
+        href="#contact-main"
+        className="sr-only focus:not-sr-only absolute left-2 top-2 bg-white text-[#1A73E8] px-4 py-2 rounded z-50"
+      >
+        Skip to main content
+      </a>
+
+      {/* Hero/Intro Section */}
+      <section className="w-full max-w-2xl mx-auto text-center py-8 px-2">
+        <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-2">
+          Empower Your Business With RegisterKaro!
+        </h1>
+        <p className="text-gray-700 text-base sm:text-lg mb-4">
+          Unlock Seamless Solutions for Incorporation, Compliance, and Taxation
+          with Our Expert Services!
+        </p>
+        <div className="flex flex-wrap justify-center gap-2 mb-4">
+          <span className="bg-[#e8f0fe] text-[#1A73E8] px-3 py-1 rounded-full text-sm font-medium">
+            Private Limited Company Registration
+          </span>
+          <span className="bg-[#e8f0fe] text-[#1A73E8] px-3 py-1 rounded-full text-sm font-medium">
+            FSSAI Certificate Registration
+          </span>
+          <span className="bg-[#e8f0fe] text-[#1A73E8] px-3 py-1 rounded-full text-sm font-medium">
+            LLP Registration
+          </span>
+          <span className="bg-[#e8f0fe] text-[#1A73E8] px-3 py-1 rounded-full text-sm font-medium">
+            Trademark Registration
+          </span>
+        </div>
+        <a
+          href="#contact-main"
+          className="inline-block bg-[#1A73E8] hover:bg-[#1666c1] text-white font-semibold py-2 px-6 rounded-full shadow transition text-base"
+        >
+          Get Started Today
+        </a>
+      </section>
+
+      {/* WhatsApp Banner */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -86,7 +138,8 @@ export default function ContactForm() {
           Get Your Queries Answered Instantly on WhatsApp
         </h3>
         <p className="text-gray-700 mb-3">
-          Whether you need help with services, pricing, or general inquiries, our team is just a message away.
+          Whether you need help with services, pricing, or general inquiries, our
+          team is just a message away.
         </p>
         <p className="font-medium text-gray-800 mb-4">
           Connect With Our Support Team!
@@ -101,7 +154,90 @@ export default function ContactForm() {
         </a>
       </motion.div>
 
-      <div className="w-full flex flex-col items-center">
+      {/* Contact Directory Section */}
+      <section
+        className="w-full max-w-3xl mx-auto mb-8"
+        aria-label="Contact Directory"
+      >
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="bg-white rounded-lg shadow p-4 flex flex-col gap-2">
+            <h4 className="font-semibold text-[#1A73E8] mb-1">Sales</h4>
+            <span className="text-gray-800 text-lg font-medium">
+              +91 84477 46183
+            </span>
+            <h4 className="font-semibold text-[#1A73E8] mt-4 mb-1">
+              Incorporation & Registrations
+            </h4>
+            <span className="text-gray-800 text-lg font-medium">
+              +91 84487 89562
+            </span>
+            <h4 className="font-semibold text-[#1A73E8] mt-4 mb-1">
+              Trademark & Copyright
+            </h4>
+            <span className="text-gray-800 text-lg font-medium">
+              +91 92050 96817
+            </span>
+          </div>
+          <div className="bg-white rounded-lg shadow p-4 flex flex-col gap-2">
+            <h4 className="font-semibold text-[#1A73E8] mb-1">
+              For Billing & Payment
+            </h4>
+            <span className="text-gray-800 text-sm">
+              Email:{" "}
+              <a
+                href="mailto:accounting@registerkaro.in"
+                className="underline hover:text-[#1A73E8]"
+              >
+                accounting@registerkaro.in
+              </a>
+            </span>
+            <h4 className="font-semibold text-[#1A73E8] mt-4 mb-1">
+              Joel Dsouza
+              <br />
+              <span className="text-xs font-normal text-gray-600">
+                Co-founder
+              </span>
+            </h4>
+            <span className="text-gray-800 text-sm">
+              Email:{" "}
+              <a
+                href="mailto:joel@registerkaro.in"
+                className="underline hover:text-[#1A73E8]"
+              >
+                joel@registerkaro.in
+              </a>
+            </span>
+            <h4 className="font-semibold text-[#1A73E8] mt-4 mb-1">
+              For Grievance and Complaints
+            </h4>
+            <span className="text-gray-800 text-sm">
+              Email:{" "}
+              <a
+                href="mailto:support@registerkaro.in"
+                className="underline hover:text-[#1A73E8]"
+              >
+                support@registerkaro.in
+              </a>
+            </span>
+          </div>
+        </div>
+        <div className="mt-6 text-gray-600 text-sm text-center">
+          <span className="font-medium text-[#1A73E8]">Note:</span>{" "}
+          RegisterKaro is a leading group of expert professionals, known for its
+          excellence in guiding corporate businesses and entrepreneurs. We
+          specialize in company incorporation, tax services, and a wide range of
+          other professional services, all delivered with individual expertise
+          and dedication.
+        </div>
+      </section>
+
+      {/* Contact Form Section */}
+      <div id="contact-main" className="w-full flex flex-col items-center">
+        <Toaster
+          containerClassName="top-8"
+          position="top-center"
+          reverseOrder={false}
+        />
         {submitted ? (
           <SubmissionSuccess />
         ) : (
@@ -133,7 +269,7 @@ export default function ContactForm() {
                     <input
                       type="text"
                       name="name"
-                      placeholder="John Doe"
+                      placeholder="Name"
                       onChange={handleChange}
                       required
                       className="w-full border border-gray-300 rounded-md px-4 py-2 mt-1 focus:outline-none focus:ring-2 focus:ring-[#1A73E8]"
@@ -147,7 +283,7 @@ export default function ContactForm() {
                     <input
                       type="email"
                       name="email"
-                      placeholder="you@example.com"
+                      placeholder="email"
                       onChange={handleChange}
                       required
                       className="w-full border border-gray-300 rounded-md px-4 py-2 mt-1 focus:outline-none focus:ring-2 focus:ring-[#1A73E8]"
@@ -161,7 +297,7 @@ export default function ContactForm() {
                     <input
                       type="tel"
                       name="phone"
-                      placeholder="+91 98765 43210"
+                      placeholder="+91 "
                       onChange={handleChange}
                       className="w-full border border-gray-300 rounded-md px-4 py-2 mt-1 focus:outline-none focus:ring-2 focus:ring-[#1A73E8]"
                     />
@@ -174,7 +310,7 @@ export default function ContactForm() {
                     <input
                       type="text"
                       name="subject"
-                      placeholder="Query about services"
+                      placeholder="Query "
                       onChange={handleChange}
                       required
                       className="w-full border border-gray-300 rounded-md px-4 py-2 mt-1 focus:outline-none focus:ring-2 focus:ring-[#1A73E8]"
@@ -189,7 +325,7 @@ export default function ContactForm() {
                   <textarea
                     name="message"
                     rows={4}
-                    placeholder="Your message here..."
+                    placeholder="Type here..."
                     onChange={handleChange}
                     required
                     className="w-full border border-gray-300 rounded-md px-4 py-2 mt-1 focus:outline-none focus:ring-2 focus:ring-[#1A73E8] resize-none"
@@ -207,6 +343,47 @@ export default function ContactForm() {
           </div>
         )}
       </div>
+
+      {/* FAQ Section for Contact Page */}
+      <section
+        className="w-full max-w-3xl mx-auto px-2 py-10"
+        aria-label="Contact FAQs"
+      >
+        <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-6">
+          Frequently Asked Questions
+        </h2>
+        <div className="space-y-4">
+          <details className="bg-white rounded-lg shadow p-4 group">
+            <summary className="font-semibold text-[#1A73E8] cursor-pointer group-open:text-[#1666c1] transition">
+              How quickly will I get a response?
+            </summary>
+            <p className="text-gray-700 mt-2">
+              Our team responds to all queries within 24 hours on business days.
+            </p>
+          </details>
+          <details className="bg-white rounded-lg shadow p-4 group">
+            <summary className="font-semibold text-[#1A73E8] cursor-pointer group-open:text-[#1666c1] transition">
+              Can I get support for multiple services?
+            </summary>
+            <p className="text-gray-700 mt-2">
+              Yes, our experts can guide you across incorporation, compliance, tax,
+              and more—just mention your needs in the form.
+            </p>
+          </details>
+          <details className="bg-white rounded-lg shadow p-4 group">
+            <summary className="font-semibold text-[#1A73E8] cursor-pointer group-open:text-[#1666c1] transition">
+              Is my information safe?
+            </summary>
+            <p className="text-gray-700 mt-2">
+              Absolutely. We use industry-standard security to keep your data
+              confidential and protected.
+            </p>
+          </details>
+        </div>
+      </section>
+
+
+
     </div>
   );
 }
