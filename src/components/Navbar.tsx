@@ -25,7 +25,7 @@ export default function Navbar() {
         </nav>
 
         {/* Mobile Menu Button */}
-        <button onClick={toggleMenu} className="md:hidden text-gray-700">
+        <button onClick={toggleMenu} className="md:hidden text-gray-700 hover:text-[#1A73E8] transition-colors cursor-pointer ">
           {menuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
@@ -35,7 +35,7 @@ export default function Navbar() {
         <div className="md:hidden bg-white shadow-md px-6 pb-4 space-y-4">
           <Link href="/" onClick={toggleMenu} className="block text-gray-700 hover:text-[#1A73E8]">Home</Link>
           <Link href="/services" onClick={toggleMenu} className="block text-gray-700 hover:text-[#1A73E8]">Services</Link>
-          <Link href="/bonus" onClick={toggleMenu} className="block text-gray-700 hover:text-[#1A73E8]">Bonus</Link>
+          <Link href="/bonus" onClick={toggleMenu} className="block text-gray-700 hover:text-[#1A73E8]">Our Team</Link>
           <Link href="/contact" onClick={toggleMenu} className="block text-gray-700 hover:text-[#1A73E8]">Contact</Link>
           <Link href="/about" onClick={toggleMenu} className="block text-gray-700 hover:text-[#1A73E8]">about</Link>
         </div>

@@ -23,10 +23,45 @@ export default function Home() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="flex flex-col-reverse md:flex-row items-center justify-between px-4 sm:px-8 py-10 sm:py-16 bg-white w-full max-w-7xl mx-auto"
+        className="flex flex-col-reverse md:flex-row items-center justify-between px-4 sm:px-8 py-10 sm:py-16 bg-white w-full max-w-7xl mx-auto mb-12"
         id="main-content"
         aria-label="Hero section"
       >
+
+        {/* Right Image Content */}
+        <div className="w-full md:w-1/2 mb-10 md:mb-0 flex justify-center relative">
+          <div className="relative z-10">
+            <img
+              src="/hero_model.webp"
+              alt="Compliance team"
+              className="rounded-lg object-cover w-[80%] mx-auto md:mx-0"
+            />
+            {/* Cloud-like question bubbles */}
+            <div className="absolute left-0 top-10 md:-left-10 md:top-20">
+              <div className="backdrop-blur-sm bg-white/70 border border-white/40 shadow-lg rounded-full px-6 py-3 flex items-center text-[#1A73E8] font-semibold text-base md:text-lg cloud-shape">
+                Need GST Help?
+              </div>
+            </div>
+            <div className="absolute left-0 top-1/2 -translate-y-1/2 md:-left-10 md:top-1/2">
+              <div className="backdrop-blur-sm bg-white/70 border border-white/40 shadow-lg rounded-full px-6 py-3 flex items-center text-[#1A73E8] font-semibold text-base md:text-lg cloud-shape">
+                Stuck with ROC?
+              </div>
+            </div>
+            <div className="absolute left-1/2 -bottom-8 md:left-1/3 md:-bottom-10 transform -translate-x-1/2">
+              <div className="backdrop-blur-sm bg-white/70 border border-white/40 shadow-lg rounded-full px-6 py-3 flex items-center text-[#1A73E8] font-semibold text-base md:text-lg cloud-shape">
+                Payroll Issues?
+              </div>
+            </div>
+            <div className="absolute right-0 bottom-0 md:-right-10 md:bottom-8 md:top-auto md:translate-y-0 top-auto mb-16">
+              <div className="backdrop-blur-sm bg-white/70 border border-white/40 shadow-lg rounded-full px-6 py-3 flex items-center text-[#1A73E8] font-semibold text-base md:text-lg cloud-shape">
+                Trouble with ITR?
+              </div>
+            </div>
+          </div>
+          <div className="absolute -top-5 right-5 w-40 h-40 bg-[#1A73E8] rounded-tr-[80px] rounded-bl-[80px] -z-10"></div>
+        </div>
+
+        
         {/* Left Text Content */}
         <div className="w-full md:w-1/2 text-center md:text-left">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight mb-4">
@@ -37,43 +72,33 @@ export default function Home() {
           </p>
           <a
             href="#"
-            className="inline-block bg-[#1A73E8] hover:bg-[#1A73E8] text-white font-medium py-2 px-6 rounded-full shadow-md transition duration-200"
+            className="inline-block bg-[#1A73E8] hover:bg-[#1666c1] text-white font-medium py-2 px-6 rounded-full shadow-md transition duration-200"
           >
             Get Started
           </a>
 
           {/* Stats */}
-          <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <div className="bg-[#f9fafb] border border-gray-200 rounded-lg p-4 shadow-sm">
+          <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <div className="bg-[#f9fafb] border border-gray-200 rounded-lg p-6 shadow-sm">
               <p className="text-xl font-bold text-gray-900">500+</p>
               <p className="text-sm text-gray-600">Businesses Every Month</p>
             </div>
-            <div className="bg-[#f9fafb] border border-gray-200 rounded-lg p-4 shadow-sm">
+            <div className="bg-[#f9fafb] border border-gray-200 rounded-lg p-6 shadow-sm">
               <p className="text-xl font-bold text-gray-900">20,000+</p>
               <p className="text-sm text-gray-600">Clients All Over India</p>
             </div>
-            <div className="bg-[#f9fafb] border border-gray-200 rounded-lg p-4 shadow-sm">
+            <div className="bg-[#f9fafb] border border-gray-200 rounded-lg p-6 shadow-sm">
               <p className="text-xl font-bold text-gray-900">250+</p>
               <p className="text-sm text-gray-600">Professionals Network</p>
             </div>
           </div>
         </div>
 
-        {/* Right Image Content */}
-        <div className="w-full md:w-1/2 mb-10 md:mb-0 flex justify-center relative">
-          <div className="relative z-10">
-            <img
-              src="/hero_model.webp"
-              alt="Compliance team"
-              className="rounded-lg object-cover w-[80%] mx-auto md:mx-0"
-            />
-          </div>
-          <div className="absolute -top-5 right-5 w-40 h-40 bg-[#1A73E8] rounded-tr-[80px] rounded-bl-[80px] -z-10"></div>
-        </div>
+        
       </motion.section>
 
       {/* Comparison Section */}
-      <section className="w-full max-w-7xl mx-auto px-4 sm:px-8 py-16 flex flex-col items-center" aria-label="Comparison of compliance options">
+      <section className="w-full max-w-7xl mx-auto px-4 sm:px-8 py-12 md:py-16 flex flex-col items-center mb-12" aria-label="Comparison of compliance options">
         <h2 className="text-3xl sm:text-4xl font-extrabold text-center text-gray-900 mb-4">
           Grow Your Business instead of Complex Registration processes and leave it for us
         </h2>
@@ -133,7 +158,7 @@ export default function Home() {
             </p>
             <a
               href="#"
-              className="mt-4 inline-block bg-[#1A73E8] hover:bg-[#1A73E8] text-white font-medium py-2 px-6 rounded-full shadow-md transition duration-200"
+              className="mt-4 inline-block bg-[#1A73E8] hover:bg-[#1666c1] text-white font-medium py-2 px-6 rounded-full shadow-md transition duration-200"
             >
               Get Started!
             </a>
@@ -142,26 +167,26 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="w-full max-w-7xl mx-auto px-4 sm:px-8 py-12" aria-label="Why Choose Us">
+      <section className="w-full max-w-7xl mx-auto px-4 sm:px-8 py-12 mb-12" aria-label="Why Choose Us">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-center text-gray-900 mb-8">
           Why Choose Us?
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-white border border-gray-200 rounded-lg shadow-md p-6 flex flex-col items-center text-center">
+          <div className="bg-white border border-gray-200 rounded-lg shadow-md p-8 flex flex-col items-center text-center">
             <span className="text-[#1A73E8] text-4xl mb-4">⚡</span>
             <h3 className="text-xl font-semibold mb-2">Fast & Hassle-Free</h3>
             <p className="text-gray-600">
               Experience quick turnaround times and a seamless online process for all your compliance needs.
             </p>
           </div>
-          <div className="bg-white border border-gray-200 rounded-lg shadow-md p-6 flex flex-col items-center text-center">
+          <div className="bg-white border border-gray-200 rounded-lg shadow-md p-8 flex flex-col items-center text-center">
             <span className="text-[#1A73E8] text-4xl mb-4">💡</span>
             <h3 className="text-xl font-semibold mb-2">Expert Guidance</h3>
             <p className="text-gray-600">
               Our team of professionals ensures you get the right advice and support at every step.
             </p>
           </div>
-          <div className="bg-white border border-gray-200 rounded-lg shadow-md p-6 flex flex-col items-center text-center">
+          <div className="bg-white border border-gray-200 rounded-lg shadow-md p-8 flex flex-col items-center text-center">
             <span className="text-[#1A73E8] text-4xl mb-4">💰</span>
             <h3 className="text-xl font-semibold mb-2">Affordable Pricing</h3>
             <p className="text-gray-600">
@@ -182,12 +207,12 @@ export default function Home() {
       </section>
 
       {/* FAQ Section for SEO & UX */}
-      <section className="w-full max-w-4xl mx-auto px-4 sm:px-8 py-12" aria-label="Frequently Asked Questions">
+      <section className="w-full max-w-4xl mx-auto px-4 sm:px-8 py-12 mb-12" aria-label="Frequently Asked Questions">
         <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-8">
           Frequently Asked Questions
         </h2>
         <div className="space-y-4">
-          <details className="bg-white rounded-lg shadow p-4 group">
+          <details className="bg-white rounded-lg shadow p-6 group">
             <summary className="font-semibold text-[#1A73E8] cursor-pointer group-open:text-[#1666c1] transition">
               What services does G&S Finance provide?
             </summary>
@@ -195,7 +220,7 @@ export default function Home() {
               We offer business compliance, tax filing, legal services, and expert support for entrepreneurs and growing businesses.
             </p>
           </details>
-          <details className="bg-white rounded-lg shadow p-4 group">
+          <details className="bg-white rounded-lg shadow p-6 group">
             <summary className="font-semibold text-[#1A73E8] cursor-pointer group-open:text-[#1666c1] transition">
               How quickly can I get support?
             </summary>
@@ -203,7 +228,7 @@ export default function Home() {
               Our team responds to all queries within 24 hours, ensuring you get timely and professional assistance.
             </p>
           </details>
-          <details className="bg-white rounded-lg shadow p-4 group">
+          <details className="bg-white rounded-lg shadow p-6 group">
             <summary className="font-semibold text-[#1A73E8] cursor-pointer group-open:text-[#1666c1] transition">
               Is my data secure with G&S Finance?
             </summary>

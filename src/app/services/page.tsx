@@ -33,7 +33,7 @@ export default function Services() {
   ];
 
   return (
-    <section className="px-6 py-12 bg-[#F9FAFB] font-inter">
+    <section className="px-4 sm:px-8 py-12 bg-[#F9FAFB] font-inter">
       {/* SEO Meta Tags */}
       <Head>
         <title>Services | G&S Finance</title>
@@ -47,7 +47,7 @@ export default function Services() {
       </a>
 
       {/* Hero Section */}
-      <section className="min-h-auto flex flex-col justify-center items-center p-8 m-4 md:px-0 text-center bg-white">
+      <section className="min-h-auto flex flex-col justify-center items-center p-8 m-4 md:px-0 text-center bg-white mb-12">
         <motion.h1
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -76,7 +76,7 @@ export default function Services() {
       </section>
 
       {/* What We Do Section */}
-      <section className="w-full max-w-7xl mx-auto py-16 px-2 sm:px-8 flex flex-col md:flex-row items-center gap-12 bg-[#F4F7FE] rounded-3xl mb-16" aria-label="What We Do">
+      <section className="w-full max-w-7xl mx-auto py-12 px-4 sm:px-8 flex-col md:flex-row items-center gap-12 bg-[#F4F7FE] rounded-3xl mb-12 hidden sm:flex" aria-label="What We Do">
         {/* Left Content */}
         <div className="flex-1 flex flex-col justify-center items-start">
           <span className="uppercase text-gray-700 font-medium tracking-wide mb-2">What We Do</span>
@@ -173,134 +173,110 @@ export default function Services() {
       </section>
 
       {/* Business Journey Section */}
-      <section className="w-full max-w-4xl mx-auto flex flex-col items-center py-16" aria-label="Business Journey">
-        <div className="flex flex-col md:flex-row items-center justify-center gap-12 w-full">
+      <section className="w-full max-w-4xl mx-auto flex flex-col items-center py-12 mb-12" aria-label="Business Journey">
+        <div className="flex flex-row items-start justify-center gap-2 sm:gap-12 w-full">
           {/* Sole Trader */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="flex flex-col items-center"
+            className="flex flex-col items-center flex-1 min-w-0"
           >
-            <div className="bg-[#184366] rounded-xl p-6 flex flex-col items-center shadow-lg">
-              <svg width="40" height="40" fill="none" viewBox="0 0 24 24">
+            <div className="bg-[#184366] rounded-xl p-2 sm:p-6 flex flex-col items-center shadow-lg mx-auto">
+              <svg
+                width="24"
+                height="24"
+                className="sm:w-10 sm:h-10"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
                 <path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2c-3.33 0-10 1.67-10 5v3h20v-3c0-3.33-6.67-5-10-5Z" fill="#fff"/>
               </svg>
             </div>
-            <span className="mt-4 font-semibold text-gray-800">Sole Trader</span>
+            <span className="mt-2 text-xs sm:text-sm font-semibold text-gray-800 text-center">Sole Trader</span>
           </motion.div>
 
-          {/* Arrow Down or Right */}
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="hidden md:block"
-          >
-            <svg width="60" height="40" viewBox="0 0 60 40" fill="none">
-              <path d="M10 20 Q30 40 50 20" stroke="#1A73E8" strokeWidth="3" fill="none" markerEnd="url(#arrowhead)" />
+          {/* Arrow */}
+          <div className="flex items-center justify-center flex-none">
+            <svg width="28" height="24" viewBox="0 0 28 24" fill="none">
+              <path d="M4 12 Q14 24 24 12" stroke="#1A73E8" strokeWidth="2" fill="none" markerEnd="url(#arrowhead)" />
               <defs>
-                <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
-                  <polygon points="0 0, 8 4, 0 8" fill="#1A73E8"/>
+                <marker id="arrowhead" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+                  <polygon points="0 0, 6 3, 0 6" fill="#1A73E8"/>
                 </marker>
               </defs>
             </svg>
-          </motion.div>
-          {/* For mobile, vertical arrow */}
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="md:hidden my-4"
-          >
-            <svg width="40" height="60" viewBox="0 0 40 60" fill="none">
-              <path d="M20 10 Q40 30 20 50" stroke="#1A73E8" strokeWidth="3" fill="none" markerEnd="url(#arrowhead2)" />
-              <defs>
-                <marker id="arrowhead2" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
-                  <polygon points="0 0, 8 4, 0 8" fill="#1A73E8"/>
-                </marker>
-              </defs>
-            </svg>
-          </motion.div>
+          </div>
 
           {/* Limited Company */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="flex flex-col items-center"
+            className="flex flex-col items-center flex-1 min-w-0"
           >
-            <div className="bg-[#1A73E8] rounded-xl p-6 flex flex-col items-center shadow-lg">
-              <svg width="40" height="40" fill="none" viewBox="0 0 24 24">
+            <div className="bg-[#1A73E8] rounded-xl p-2 sm:p-6 flex flex-col items-center shadow-lg mx-auto">
+              <svg
+                width="24"
+                height="24"
+                className="sm:w-10 sm:h-10"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
                 <rect x="3" y="7" width="18" height="13" rx="2" fill="#fff"/>
                 <rect x="7" y="3" width="10" height="4" rx="1" fill="#fff" opacity="0.7"/>
               </svg>
             </div>
-            <span className="mt-4 font-semibold text-gray-800">Limited Company</span>
+            <span className="mt-2 text-xs sm:text-sm font-semibold text-gray-800 text-center">Limited Company</span>
           </motion.div>
 
-          {/* Arrow Down or Right */}
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="hidden md:block"
-          >
-            <svg width="60" height="40" viewBox="0 0 60 40" fill="none">
-              <path d="M10 20 Q30 40 50 20" stroke="#1A73E8" strokeWidth="3" fill="none" markerEnd="url(#arrowhead3)" />
+          {/* Arrow */}
+          <div className="flex items-center justify-center flex-none">
+            <svg width="28" height="24" viewBox="0 0 28 24" fill="none">
+              <path d="M4 12 Q14 24 24 12" stroke="#1A73E8" strokeWidth="2" fill="none" markerEnd="url(#arrowhead2)" />
               <defs>
-                <marker id="arrowhead3" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
-                  <polygon points="0 0, 8 4, 0 8" fill="#1A73E8"/>
+                <marker id="arrowhead2" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+                  <polygon points="0 0, 6 3, 0 6" fill="#1A73E8"/>
                 </marker>
               </defs>
             </svg>
-          </motion.div>
-          {/* For mobile, vertical arrow */}
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="md:hidden my-4"
-          >
-            <svg width="40" height="60" viewBox="0 0 40 60" fill="none">
-              <path d="M20 10 Q40 30 20 50" stroke="#1A73E8" strokeWidth="3" fill="none" markerEnd="url(#arrowhead4)" />
-              <defs>
-                <marker id="arrowhead4" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
-                  <polygon points="0 0, 8 4, 0 8" fill="#1A73E8"/>
-                </marker>
-              </defs>
-            </svg>
-          </motion.div>
+          </div>
 
           {/* Growing Business */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex flex-col items-center"
+            className="flex flex-col items-center flex-1 min-w-0"
           >
-            <div className="bg-[#184366] rounded-xl p-6 flex flex-col items-center shadow-lg">
-              <svg width="40" height="40" fill="none" viewBox="0 0 24 24">
+            <div className="bg-[#184366] rounded-xl p-2 sm:p-6 flex flex-col items-center shadow-lg mx-auto">
+              <svg
+                width="24"
+                height="24"
+                className="sm:w-10 sm:h-10"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
                 <path d="M4 17v2h16v-2M7 13l3 3 7-7" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 <rect x="3" y="3" width="18" height="18" rx="2" stroke="#fff" strokeWidth="2"/>
               </svg>
             </div>
-            <span className="mt-4 font-semibold text-gray-800">Growing Business</span>
+            <span className="mt-2 text-xs sm:text-sm font-semibold text-gray-800 text-center">Growing Business</span>
           </motion.div>
         </div>
       </section>
 
       {/* Our Services Section */}
-      <section id="services-main" className="max-w-6xl mx-auto text-center py-12" aria-label="Our Services">
+      <section id="services-main" className="max-w-6xl mx-auto text-center py-12 px-4 sm:px-8 mb-12" aria-label="Our Services">
         <h2 className="text-4xl font-bold mb-4 text-gray-900">Our Services</h2>
         <p className="text-gray-600 mb-12">
           Explore our expert services designed to simplify your financial journey.
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center items-stretch">
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white p-6 rounded-xl shadow hover:shadow-md transition duration-300 text-left"
+              className="bg-white p-6 rounded-xl shadow hover:shadow-md transition duration-300 flex flex-col items-center text-center"
               tabIndex={0}
               aria-label={service.title}
             >
@@ -323,7 +299,7 @@ export default function Services() {
       </section>
 
       {/* FAQ Section for SEO & UX */}
-      <section className="w-full max-w-4xl mx-auto px-4 sm:px-8 py-12" aria-label="Frequently Asked Questions">
+      <section className="w-full max-w-4xl mx-auto px-4 sm:px-8 py-12 mb-8" aria-label="Frequently Asked Questions">
         <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-8">
           Frequently Asked Questions
         </h2>
