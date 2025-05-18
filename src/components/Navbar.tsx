@@ -12,7 +12,7 @@ export default function Navbar() {
     <header className="bg-white shadow-md sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <Link href="/" className="text-xl font-bold text-[#1A73E8]">
-          GandS Finance
+          G&S Finance
         </Link>
 
         {/* Desktop Menu */}
