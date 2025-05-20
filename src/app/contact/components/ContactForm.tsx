@@ -225,7 +225,7 @@ export default function ContactForm() {
               <p className="text-gray-500 text-center mb-6 text-sm">
                 Fill out the form and our team will get back to you shortly.
               </p>
-              <form onSubmit={handleSubmit} className="space-y-5">
+              <form onSubmit={handleSubmit} className="space-y-2">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="text-sm font-medium text-gray-700">Name</label>
