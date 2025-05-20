@@ -112,7 +112,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center px-4 sm:px-8 py-8 font-inter">
+    <div className="min-h-screen flex flex-col items-center justify-center px-4 sm:px-2 py-2 font-inter">
       {/* SEO Meta Tags */}
       <Head>
         <title>Contact Us | RegisterKaro</title>
