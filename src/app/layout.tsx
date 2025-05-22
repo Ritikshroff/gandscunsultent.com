@@ -8,13 +8,17 @@ export const metadata = {
   description: "Trusted financial guidance for a secure tomorrow",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
       <body className="min-h-screen flex flex-col">
-        <Navbar />
+        {/* <Navbar /> */}
         <main className="flex-grow">{children}</main>
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );
