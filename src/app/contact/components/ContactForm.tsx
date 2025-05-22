@@ -78,7 +78,9 @@ export default function ContactForm() {
     const validationErrors = validate();
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
-      toast.error("Please fix the errors in the form.", { id: "contact-toast" });
+      toast.error("Please fix the errors in the form.", {
+        id: "contact-toast",
+      });
       return;
     }
 
@@ -190,10 +192,12 @@ export default function ContactForm() {
               />
             </svg>
           </span>
-          <span className="text-white font-semibold text-lg ml-2">WhatsApp Support</span>
+          <span className="text-white font-semibold text-lg ml-2">
+            WhatsApp Support
+          </span>
         </div>
         <a
-          href="https://wa.me/918447746183"
+          href="https://wa.me/9555325902"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block w-full sm:w-auto text-center bg-[#25D366] hover:bg-[#1DA851] text-white font-semibold py-2 px-5 rounded-full transition duration-200 shadow-md hover:shadow-lg"
@@ -203,8 +207,15 @@ export default function ContactForm() {
       </motion.div>
 
       {/* Contact Form Section - moved up, always visible */}
-      <div id="contact-main" className="w-full flex flex-col items-center mb-12 px-4 sm:px-0">
-        <Toaster containerClassName="top-8" position="top-center" reverseOrder={false} />
+      <div
+        id="contact-main"
+        className="w-full flex flex-col items-center mb-12 px-1 sm:px-0"
+      >
+        <Toaster
+          containerClassName="top-8"
+          position="top-center"
+          reverseOrder={false}
+        />
         {submitted ? (
           <SubmissionSuccess />
         ) : (
@@ -218,7 +229,7 @@ export default function ContactForm() {
               />
             </div>
             {/* Right form area */}
-            <div className="md:w-1/2 w-full p-4 sm:p-8">
+            <div className="md:w-1/2 w-full p-2 sm:p-8">
               <h2 className="text-2xl sm:text-3xl font-semibold text-gray-800 text-center mb-2">
                 Get in Touch
               </h2>
@@ -226,80 +237,114 @@ export default function ContactForm() {
                 Fill out the form and our team will get back to you shortly.
               </p>
               <form onSubmit={handleSubmit} className="space-y-2">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4">
                   <div>
-                    <label className="text-sm font-medium text-gray-700">Name</label>
+                    <label className="text-sm font-medium text-gray-700">
+                      Name
+                    </label>
                     <input
                       type="text"
                       name="name"
                       placeholder="Name"
                       onChange={handleChange}
                       required
-                      className={`w-full border ${errors.name ? "border-red-400" : "border-gray-300"} rounded-md px-4 py-2 mt-1 focus:outline-none focus:ring-2 focus:ring-[#1A73E8]`}
+                      className={`w-full border ${
+                        errors.name ? "border-red-400" : "border-gray-300"
+                      } rounded-md px-4 py-2 mt-1 focus:outline-none focus:ring-2 focus:ring-[#1A73E8]`}
                     />
                     {errors.name && (
-                      <span className="text-xs text-red-500">{errors.name}</span>
+                      <span className="text-xs text-red-500">
+                        {errors.name}
+                      </span>
                     )}
                   </div>
                   <div>
-                    <label className="text-sm font-medium text-gray-700">Email</label>
+                    <label className="text-sm font-medium text-gray-700">
+                      Email
+                    </label>
                     <input
                       type="email"
                       name="email"
                       placeholder="email"
                       onChange={handleChange}
                       required
-                      className={`w-full border ${errors.email ? "border-red-400" : "border-gray-300"} rounded-md px-4 py-2 mt-1 focus:outline-none focus:ring-2 focus:ring-[#1A73E8]`}
+                      className={`w-full border ${
+                        errors.email ? "border-red-400" : "border-gray-300"
+                      } rounded-md px-4 py-2 mt-1 focus:outline-none focus:ring-2 focus:ring-[#1A73E8]`}
                     />
                     {errors.email && (
-                      <span className="text-xs text-red-500">{errors.email}</span>
+                      <span className="text-xs text-red-500">
+                        {errors.email}
+                      </span>
                     )}
                   </div>
                   <div>
-                    <label className="text-sm font-medium text-gray-700">Phone</label>
+                    <label className="text-sm font-medium text-gray-700">
+                      Phone
+                    </label>
                     <input
                       type="tel"
                       name="phone"
                       placeholder="+91 "
                       onChange={handleChange}
-                      className={`w-full border ${errors.phone ? "border-red-400" : "border-gray-300"} rounded-md px-4 py-2 mt-1 focus:outline-none focus:ring-2 focus:ring-[#1A73E8]`}
+                      className={`w-full border ${
+                        errors.phone ? "border-red-400" : "border-gray-300"
+                      } rounded-md px-4 py-2 mt-1 focus:outline-none focus:ring-2 focus:ring-[#1A73E8]`}
                     />
                     {errors.phone && (
-                      <span className="text-xs text-red-500">{errors.phone}</span>
+                      <span className="text-xs text-red-500">
+                        {errors.phone}
+                      </span>
                     )}
                   </div>
                   <div>
-                    <label className="text-sm font-medium text-gray-700">Subject</label>
+                    <label className="text-sm font-medium text-gray-700">
+                      Subject
+                    </label>
                     <input
                       type="text"
                       name="subject"
                       placeholder="Query "
                       onChange={handleChange}
                       required
-                      className={`w-full border ${errors.subject ? "border-red-400" : "border-gray-300"} rounded-md px-4 py-2 mt-1 focus:outline-none focus:ring-2 focus:ring-[#1A73E8]`}
+                      className={`w-full border ${
+                        errors.subject ? "border-red-400" : "border-gray-300"
+                      } rounded-md px-4 py-2 mt-1 focus:outline-none focus:ring-2 focus:ring-[#1A73E8]`}
                     />
                     {errors.subject && (
-                      <span className="text-xs text-red-500">{errors.subject}</span>
+                      <span className="text-xs text-red-500">
+                        {errors.subject}
+                      </span>
                     )}
                   </div>
                 </div>
                 <div>
-                  <label className="text-sm font-medium text-gray-700">Message</label>
+                  <label className="text-sm font-medium text-gray-700">
+                    Message
+                  </label>
                   <textarea
                     name="message"
                     rows={4}
                     placeholder="Type here..."
                     onChange={handleChange}
                     required
-                    className={`w-full border ${errors.message ? "border-red-400" : "border-gray-300"} rounded-md px-4 py-2 mt-1 focus:outline-none focus:ring-2 focus:ring-[#1A73E8] resize-none`}
+                    className={`w-full border ${
+                      errors.message ? "border-red-400" : "border-gray-300"
+                    } rounded-md px-4 py-2 mt-1 focus:outline-none focus:ring-2 focus:ring-[#1A73E8] resize-none`}
                   />
                   {errors.message && (
-                    <span className="text-xs text-red-500">{errors.message}</span>
+                    <span className="text-xs text-red-500">
+                      {errors.message}
+                    </span>
                   )}
                 </div>
                 <button
                   type="submit"
-                  className={`w-full bg-[#1A73E8] hover:bg-[#1666c1] text-white font-medium py-3 rounded-md transition duration-200 shadow-md hover:shadow-lg text-base mt-2 ${isSubmitting ? "opacity-60 cursor-not-allowed" : "cursor-pointer"}`}
+                  className={`w-full bg-[#1A73E8] hover:bg-[#1666c1] text-white font-medium py-3 rounded-md transition duration-200 shadow-md hover:shadow-lg text-base mt-2 ${
+                    isSubmitting
+                      ? "opacity-60 cursor-not-allowed"
+                      : "cursor-pointer"
+                  }`}
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? "Sending..." : "Send Message"}
@@ -314,7 +359,10 @@ export default function ContactForm() {
       <div className="w-full max-w-3xl mx-auto border-b border-gray-200 my-10" />
 
       {/* FAQ Section for Contact Page */}
-      <section className="w-full max-w-3xl mx-auto px-4 sm:px-8 py-10 mb-10" aria-label="Contact FAQs">
+      <section
+        className="w-full max-w-3xl mx-auto px-4 sm:px-8 py-10 mb-10"
+        aria-label="Contact FAQs"
+      >
         <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-6">
           Frequently Asked Questions
         </h2>
@@ -332,7 +380,8 @@ export default function ContactForm() {
               Can I get support for multiple services?
             </summary>
             <p className="text-gray-700 mt-2">
-              Yes, our experts can guide you across incorporation, compliance, tax, and more—just mention your needs in the form.
+              Yes, our experts can guide you across incorporation, compliance,
+              tax, and more—just mention your needs in the form.
             </p>
           </details>
           <details className="bg-white rounded-lg shadow p-4 group">
@@ -340,7 +389,8 @@ export default function ContactForm() {
               Is my information safe?
             </summary>
             <p className="text-gray-700 mt-2">
-              Absolutely. We use industry-standard security to keep your data confidential and protected.
+              Absolutely. We use industry-standard security to keep your data
+              confidential and protected.
             </p>
           </details>
         </div>
@@ -368,59 +418,133 @@ export default function ContactForm() {
             {/* Cards duplicated for seamless infinite loop */}
             {[...Array(2)].flatMap((_, i) => [
               // Card 1
-              <div key={`sales-${i}`} className="min-w-[260px] max-w-xs bg-white rounded-xl shadow p-4 flex flex-col gap-2 items-center snap-center">
+              <div
+                key={`sales-${i}`}
+                className="min-w-[260px] max-w-xs bg-white rounded-xl shadow p-4 flex flex-col gap-2 items-center snap-center"
+              >
                 <h4 className="font-semibold text-[#1A73E8] mb-1">Sales</h4>
-                <a href="tel:+918447746183" className="text-gray-800 text-lg font-medium underline hover:text-[#1A73E8]">
+                <a
+                  href="tel:+9555325902"
+                  className="text-gray-800 text-lg font-medium underline hover:text-[#1A73E8]"
+                >
                   +91 84477 46183
                 </a>
-                <p className="text-gray-500 text-xs text-center">For all sales related queries</p>
+                <p className="text-gray-500 text-xs text-center">
+                  For all sales related queries
+                </p>
               </div>,
               // Card 2
-              <div key={`incorp-${i}`} className="min-w-[260px] max-w-xs bg-white rounded-xl shadow p-4 flex flex-col gap-2 items-center snap-center">
-                <h4 className="font-semibold text-[#1A73E8] mb-1">Incorporation & Registrations</h4>
-                <a href="tel:+918448789562" className="text-gray-800 text-lg font-medium underline hover:text-[#1A73E8]">
+              <div
+                key={`incorp-${i}`}
+                className="min-w-[260px] max-w-xs bg-white rounded-xl shadow p-4 flex flex-col gap-2 items-center snap-center"
+              >
+                <h4 className="font-semibold text-[#1A73E8] mb-1">
+                  Incorporation & Registrations
+                </h4>
+                <a
+                  href="tel:+918448789562"
+                  className="text-gray-800 text-lg font-medium underline hover:text-[#1A73E8]"
+                >
                   +91 84487 89562
                 </a>
-                <p className="text-gray-500 text-xs text-center">Company/LLP/FSSAI/Other Registrations</p>
+                <p className="text-gray-500 text-xs text-center">
+                  Company/LLP/FSSAI/Other Registrations
+                </p>
               </div>,
               // Card 3
-              <div key={`tm-${i}`} className="min-w-[260px] max-w-xs bg-white rounded-xl shadow p-4 flex flex-col gap-2 items-center snap-center">
-                <h4 className="font-semibold text-[#1A73E8] mb-1">Trademark & Copyright</h4>
-                <a href="tel:+919205096817" className="text-gray-800 text-lg font-medium underline hover:text-[#1A73E8]">
+              <div
+                key={`tm-${i}`}
+                className="min-w-[260px] max-w-xs bg-white rounded-xl shadow p-4 flex flex-col gap-2 items-center snap-center"
+              >
+                <h4 className="font-semibold text-[#1A73E8] mb-1">
+                  Trademark & Copyright
+                </h4>
+                <a
+                  href="tel:+919205096817"
+                  className="text-gray-800 text-lg font-medium underline hover:text-[#1A73E8]"
+                >
                   +91 92050 96817
                 </a>
-                <p className="text-gray-500 text-xs text-center">IPR, Trademark & Copyright queries</p>
+                <p className="text-gray-500 text-xs text-center">
+                  IPR, Trademark & Copyright queries
+                </p>
               </div>,
               // Card 4
-              <div key={`billing-${i}`} className="min-w-[260px] max-w-xs bg-white rounded-xl shadow p-4 flex flex-col gap-2 items-center snap-center">
-                <h4 className="font-semibold text-[#1A73E8] mb-1">Billing & Payment</h4>
+              <div
+                key={`billing-${i}`}
+                className="min-w-[260px] max-w-xs bg-white rounded-xl shadow p-4 flex flex-col gap-2 items-center snap-center"
+              >
+                <h4 className="font-semibold text-[#1A73E8] mb-1">
+                  Billing & Payment
+                </h4>
                 <span className="text-gray-800 text-sm text-center">
-                  Email: <a href="mailto:accounting@registerkaro.in" className="underline hover:text-[#1A73E8]">accounting@registerkaro.in</a>
+                  Email:{" "}
+                  <a
+                    href="mailto:accounting@registerkaro.in"
+                    className="underline hover:text-[#1A73E8]"
+                  >
+                    accounting@registerkaro.in
+                  </a>
                 </span>
-                <p className="text-gray-500 text-xs text-center">For invoices, receipts, and payment queries</p>
+                <p className="text-gray-500 text-xs text-center">
+                  For invoices, receipts, and payment queries
+                </p>
               </div>,
               // Card 5
-              <div key={`joel-${i}`} className="min-w-[260px] max-w-xs bg-white rounded-xl shadow p-4 flex flex-col gap-2 items-center snap-center">
-                <h4 className="font-semibold text-[#1A73E8] mb-1">Joel Dsouza</h4>
-                <span className="text-xs font-normal text-gray-600 mb-1">Co-founder</span>
-                <span className="text-gray-800 text-sm text-center">
-                  Email: <a href="mailto:joel@registerkaro.in" className="underline hover:text-[#1A73E8]">joel@registerkaro.in</a>
+              <div
+                key={`joel-${i}`}
+                className="min-w-[260px] max-w-xs bg-white rounded-xl shadow p-4 flex flex-col gap-2 items-center snap-center"
+              >
+                <h4 className="font-semibold text-[#1A73E8] mb-1">
+                  Joel Dsouza
+                </h4>
+                <span className="text-xs font-normal text-gray-600 mb-1">
+                  Co-founder
                 </span>
-                <p className="text-gray-500 text-xs text-center">Direct connect for business partnerships</p>
+                <span className="text-gray-800 text-sm text-center">
+                  Email:{" "}
+                  <a
+                    href="mailto:joel@registerkaro.in"
+                    className="underline hover:text-[#1A73E8]"
+                  >
+                    joel@registerkaro.in
+                  </a>
+                </span>
+                <p className="text-gray-500 text-xs text-center">
+                  Direct connect for business partnerships
+                </p>
               </div>,
               // Card 6
-              <div key={`grievance-${i}`} className="min-w-[260px] max-w-xs bg-white rounded-xl shadow p-4 flex flex-col gap-2 items-center snap-center">
-                <h4 className="font-semibold text-[#1A73E8] mb-1">Grievance & Complaints</h4>
+              <div
+                key={`grievance-${i}`}
+                className="min-w-[260px] max-w-xs bg-white rounded-xl shadow p-4 flex flex-col gap-2 items-center snap-center"
+              >
+                <h4 className="font-semibold text-[#1A73E8] mb-1">
+                  Grievance & Complaints
+                </h4>
                 <span className="text-gray-800 text-sm text-center">
-                  Email: <a href="mailto:support@registerkaro.in" className="underline hover:text-[#1A73E8]">support@registerkaro.in</a>
+                  Email:{" "}
+                  <a
+                    href="mailto:support@registerkaro.in"
+                    className="underline hover:text-[#1A73E8]"
+                  >
+                    support@registerkaro.in
+                  </a>
                 </span>
-                <p className="text-gray-500 text-xs text-center">For any support or complaint escalation</p>
+                <p className="text-gray-500 text-xs text-center">
+                  For any support or complaint escalation
+                </p>
               </div>,
             ])}
           </motion.div>
         </div>
         <div className="mt-8 text-gray-600 text-sm text-center px-2">
-          <span className="font-medium text-[#1A73E8]">Note:</span> G&S Finance is a leading group of expert professionals, known for its excellence in guiding corporate businesses and entrepreneurs. We specialize in company incorporation, tax services, and a wide range of other professional services, all delivered with individual expertise and dedication.
+          <span className="font-medium text-[#1A73E8]">Note:</span> G&S Finance
+          is a leading group of expert professionals, known for its excellence
+          in guiding corporate businesses and entrepreneurs. We specialize in
+          company incorporation, tax services, and a wide range of other
+          professional services, all delivered with individual expertise and
+          dedication.
         </div>
       </section>
     </div>
